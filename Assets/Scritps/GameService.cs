@@ -9,7 +9,8 @@ public class GameService : GenericMonoSingleton<GameService>
     [Header(" View")]
     [SerializeField] private ChestSystemView chestSystemView;
     [SerializeField] private InforHolderView inforHolderView;
-
+    [Header(" Perfabs ")]
+    [SerializeField] private GameObject pfItem;
 
     [Header(" ScriptableObject")]
     [SerializeField] private ChestListSO chestListSO;

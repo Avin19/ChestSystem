@@ -12,4 +12,7 @@ public class ChestService
         this.chestListSO = _chestListSO;
         chestController = new ChestController(chestSystemView, chestListSO);
     }
+
+    public ChestController GetChestController() => chestController;
+
 }

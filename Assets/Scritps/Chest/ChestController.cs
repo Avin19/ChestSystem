@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class ChestController
 {
     private ChestSystemView chestSystemView;
@@ -9,6 +7,12 @@ public class ChestController
     {
         this.chestListSO = chestListSO;
         this.chestSystemView = chestSystemView;
+
+        SettingUpChest();
     }
 
+    private void SettingUpChest()
+    {
+
+    }
 }
