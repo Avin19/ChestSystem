@@ -1,3 +1,4 @@
+using UnityEngine;
 
 public class InfoHolderController
 {
@@ -11,4 +12,6 @@ public class InfoHolderController
     {
         inforHolderView.SetPanelButton(statusPanel);
     }
+
+
 }

@@ -14,6 +14,8 @@ public class GameService : GenericMonoSingleton<GameService>
 
     [Header(" ScriptableObject ")]
     [SerializeField] private ChestListSO chestListSO;
+    private ChestInfoSO chestInfoSO;
+    private ChestItem chestItem;
 
     private void Start()
     {
@@ -26,6 +28,9 @@ public class GameService : GenericMonoSingleton<GameService>
 
     public ChestService GetChestService() => chestService;
     public InfoHolderService GetInfoHolderService() => infoHolderService;
+    public ChestInfoSO GetChestInfo() => chestInfoSO;
+    public void SetChestItem(ChestItem _chestitem) => chestItem = _chestitem;
+    public ChestItem GetChestItem() => chestItem;
 
     #endregion
 
