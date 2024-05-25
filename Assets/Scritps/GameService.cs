@@ -6,23 +6,27 @@ public class GameService : GenericMonoSingleton<GameService>
     [SerializeField] private ChestService chestService;
     [SerializeField] private InfoHolderService infoHolderService;
 
-    [Header(" View")]
+    [Header("View")]
     [SerializeField] private ChestSystemView chestSystemView;
     [SerializeField] private InforHolderView inforHolderView;
     [Header(" Perfabs ")]
     [SerializeField] private GameObject pfItem;
 
-    [Header(" ScriptableObject")]
+    [Header(" ScriptableObject ")]
     [SerializeField] private ChestListSO chestListSO;
-
-
-
 
     private void Start()
     {
-        chestService = new ChestService(chestSystemView, chestListSO);
+        chestService = new ChestService(chestSystemView, chestListSO, pfItem);
         infoHolderService = new InfoHolderService(inforHolderView);
 
     }
+
+    #region Getter
+
+    public ChestService GetChestService() => chestService;
+    public InfoHolderService GetInfoHolderService() => infoHolderService;
+
+    #endregion
 
 }

@@ -1,18 +1,34 @@
+using UnityEngine;
+
 public class ChestController
 {
     private ChestSystemView chestSystemView;
     private ChestListSO chestListSO;
+    private GameObject pfITem;
 
-    public ChestController(ChestSystemView chestSystemView, ChestListSO chestListSO)
+    public ChestController(ChestSystemView _chestSystemView, ChestListSO _chestListSO, GameObject _pfitem)
     {
-        this.chestListSO = chestListSO;
-        this.chestSystemView = chestSystemView;
-
+        this.chestListSO = _chestListSO;
+        this.chestSystemView = _chestSystemView;
+        this.pfITem = _pfitem;
         SettingUpChest();
     }
 
     private void SettingUpChest()
     {
+        foreach (ChestInfoSO chest in chestListSO.ChestInfoSOList)
+        {
+            ChestItem item = GameObject.Instantiate(pfITem, chestSystemView.transform).GetComponent<ChestItem>();
+            item.SetImage(chest.chestImage);
+
+            item.GetName(chest.chestName);
+
+        }
+    }
+    public void ChestInformation(string message)
+    {
+        Debug.Log(message);
+
 
     }
 }

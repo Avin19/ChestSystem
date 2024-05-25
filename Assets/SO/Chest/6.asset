@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e32daaea8d89d2f4c9132a13791494c2, type: 3}
   m_Name: 6
   m_EditorClassIdentifier: 
-  chestImage: {fileID: 21300000, guid: 2726c3c889b34e04ab61a61d907ec768, type: 3}
-  lockedTime: 0
+  chestImage: {fileID: 21300000, guid: 3d923773a0fa33f42854a388573515c7, type: 3}
+  lockedTime: 43200
   unlockTimer: 0
+  chestName: 6
   unlocked: 0
   collected: 0

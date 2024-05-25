@@ -6,4 +6,7 @@ using UnityEngine;
 public class ChestListSO : ScriptableObject
 {
     [SerializeField] private List<ChestInfoSO> chestInfoSOs = new List<ChestInfoSO>();
+
+
+    public List<ChestInfoSO> ChestInfoSOList => chestInfoSOs;
 }

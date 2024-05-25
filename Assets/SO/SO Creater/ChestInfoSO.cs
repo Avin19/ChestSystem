@@ -7,6 +7,8 @@ public class ChestInfoSO : ScriptableObject
     public float lockedTime;
     public float unlockTimer;
 
+    public string chestName;
+
     public bool unlocked;
 
     public bool collected;

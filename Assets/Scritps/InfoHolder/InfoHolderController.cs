@@ -6,4 +6,9 @@ public class InfoHolderController
     {
         this.inforHolderView = _inforHolderView;
     }
+
+    public void SetButtonPanelStatus(bool statusPanel)
+    {
+        inforHolderView.SetPanelButton(statusPanel);
+    }
 }
