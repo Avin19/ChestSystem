@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: 
   chestImage: {fileID: 21300000, guid: 3aefe60f8a4afa948a7f0f9195b316a9, type: 3}
-  lockedTime: 5400
-  unlockTimer: 0
-  chestName: 3
-  unlocked: 0
-  collected: 0
+  lockedTime: 3600
+  chestStatus: 0
+  chestType: 2
+  reward:
+    maxCoin: 800
+    minCoin: 600
+    maxGems: 60
+    minGems: 45

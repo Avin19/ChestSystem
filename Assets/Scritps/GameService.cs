@@ -20,7 +20,7 @@ public class GameService : GenericMonoSingleton<GameService>
     private void Start()
     {
         chestService = new ChestService(chestSystemView, chestListSO, pfItem);
-        infoHolderService = new InfoHolderService(inforHolderView);
+        infoHolderService = new InfoHolderService(inforHolderView, chestListSO);
 
     }
 

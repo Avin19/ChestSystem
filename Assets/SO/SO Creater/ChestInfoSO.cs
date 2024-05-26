@@ -26,6 +26,8 @@ public enum ChestType
 [System.Serializable]
 public struct Reward
 {
-    public int coin;
-    public int gems;
+    public int maxCoin;
+    public int minCoin;
+    public int maxGems;
+    public int minGems;
 }

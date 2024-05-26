@@ -13,7 +13,12 @@ public class InforHolderView : MonoBehaviour
     [SerializeField] private Button generateBtn;
 
     [SerializeField] private RectTransform panelBtn;
+    private InfoHolderController infoHolderController;
 
+    private void Start()
+    {
+        infoHolderController = GameService.Instance.GetInfoHolderService().GetInfoHolderController();
+    }
 
     public void SetPanelButton(bool panelStatus) => panelBtn.gameObject.SetActive(panelStatus);
 
@@ -26,7 +31,7 @@ public class InforHolderView : MonoBehaviour
 
     private void OnGenerateButtonClick()
     {
-        // 
+        infoHolderController.OnGenerateButtonClick();
     }
 
     private void OnGemButtonClick()
