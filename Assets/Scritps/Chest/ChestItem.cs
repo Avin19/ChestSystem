@@ -5,14 +5,15 @@ using System;
 
 public class ChestItem : MonoBehaviour
 {
-    [SerializeField] private Sprite iconSprite;
+    [SerializeField] private Image iconSprite;
     [SerializeField] private TextMeshProUGUI textTimer;
     [SerializeField] private TextMeshProUGUI chestName;
     [SerializeField] private Button onButton;
     private ChestInfoSO chestInfoSO;
     private bool startUnloacked = false;
 
-    public void SetImage(Sprite _image) => iconSprite = _image;
+    public void SetImage(Sprite _image) => iconSprite.sprite = _image;
+
     public void GetName(string _chestName) => chestName.text = _chestName;
     public void GetChestInfoSO(ChestInfoSO _chestInfoSO) => chestInfoSO = _chestInfoSO;
 
@@ -33,7 +34,8 @@ public class ChestItem : MonoBehaviour
 
     public void SetTime(float _time)
     {
-        textTimer.text = _time.ToString();
+        TimeSpan timeSpan = TimeSpan.FromSeconds(_time);
+        textTimer.text = timeSpan.ToString(@"hh\:mm\:ss");
     }
     public void SetBoolTimer(bool _unlocked) => startUnloacked = _unlocked;
     private void Update()
@@ -46,7 +48,8 @@ public class ChestItem : MonoBehaviour
 
     private void StartTimer()
     {
-        chestInfoSO.unlockTimer -= Time.deltaTime;
-        textTimer.text = (chestInfoSO.unlockTimer).ToString();
+        // chestInfoSO.unlockTimer -= Time.deltaTime;
+        TimeSpan timeSpan = TimeSpan.FromSeconds(chestInfoSO.lockedTime);
+        textTimer.text = timeSpan.ToString(@"hh\:mm\:ss\:fff");
     }
 }

@@ -5,12 +5,27 @@ public class ChestInfoSO : ScriptableObject
 {
     public Sprite chestImage;
     public float lockedTime;
-    public float unlockTimer;
+    public ChestStatus chestStatus;
+    public ChestType chestType;
+    public Reward reward;
 
-    public string chestName;
-
-    public bool unlocked;
-
-    public bool collected;
-
+}
+public enum ChestStatus
+{
+    Unlocking,
+    Unlocked,
+    Collected
+}
+public enum ChestType
+{
+    Common,
+    Rare,
+    Epic,
+    Legend
+}
+[System.Serializable]
+public struct Reward
+{
+    public int coin;
+    public int gems;
 }

@@ -20,7 +20,7 @@ public class ChestController
         {
             ChestItem item = GameObject.Instantiate(pfITem, chestSystemView.transform).GetComponent<ChestItem>();
             item.SetImage(chest.chestImage);
-            item.GetName(chest.chestName);
+            // item.GetName(chest.chestName);
             item.SetTime(chest.lockedTime);
             item.GetChestInfoSO(chest);
 

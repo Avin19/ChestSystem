@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3d923773a0fa33f42854a388573515c7, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b79b1e03551272f47b62c67080cea007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 0}
+  iconSprite: {fileID: 3017173473094115845}
   textTimer: {fileID: 3666108510315268755}
   chestName: {fileID: 6958631936065437605}
   onButton: {fileID: 2317132683689760558}
