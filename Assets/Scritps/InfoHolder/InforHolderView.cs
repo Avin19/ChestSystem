@@ -38,6 +38,8 @@ public class InforHolderView : MonoBehaviour
     private void OnStartButton()
     {
         GameService.Instance.GetChestItem().SetBoolTimer(true);
+
+
     }
 
     private void OnDisable()
