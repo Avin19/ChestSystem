@@ -24,6 +24,18 @@ public class InfoHolderController
     {
         inforHolderView.SetGemCoin(sOPlayerStatus.coinAmount, sOPlayerStatus.gemAmount);
     }
+    public void UpdateGem(int _gemUsed)
+    {
+        sOPlayerStatus.gemAmount -= _gemUsed;
+        SetCoinGem();
+
+    }
+    public void CollectReward(int _rewardCoin, int _rewardGem)
+    {
+        sOPlayerStatus.coinAmount += _rewardCoin;
+        sOPlayerStatus.gemAmount += _rewardGem;
+    }
+
 
 
 

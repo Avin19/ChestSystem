@@ -5,13 +5,14 @@ public class ChestInfoSO : ScriptableObject
 {
     public Sprite chestImage;
     public float lockedTime;
-    public ChestStatus chestStatus;
+    public ChestStatus chestStatus = ChestStatus.Locked;
     public ChestType chestType;
     public Reward reward;
 
 }
 public enum ChestStatus
 {
+    Locked,
     Unlocking,
     Unlocked,
     Collected
