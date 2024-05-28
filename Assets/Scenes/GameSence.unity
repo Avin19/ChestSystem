@@ -1552,6 +1552,7 @@ MonoBehaviour:
   inforHolderView: {fileID: 196111753}
   pfItem: {fileID: 8704659862944474529, guid: 30c7d3932af1b4b44b29a8832dea20b3, type: 3}
   chestListSO: {fileID: 11400000, guid: dd92dedf06994074cba448d6ea551594, type: 2}
+  sOPlayerStatus: {fileID: 11400000, guid: e10ee2df35b79f84baef707d3fb80565, type: 2}
 --- !u!4 &1373463960
 Transform:
   m_ObjectHideFlags: 0

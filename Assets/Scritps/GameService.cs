@@ -1,3 +1,4 @@
+using chestSystem;
 using UnityEngine;
 
 public class GameService : GenericMonoSingleton<GameService>
@@ -14,13 +15,14 @@ public class GameService : GenericMonoSingleton<GameService>
 
     [Header(" ScriptableObject ")]
     [SerializeField] private ChestListSO chestListSO;
+    [SerializeField] private SOPlayerStatus sOPlayerStatus;
     private ChestInfoSO chestInfoSO;
     private ChestItem chestItem;
 
     private void Start()
     {
         chestService = new ChestService(chestSystemView, chestListSO, pfItem);
-        infoHolderService = new InfoHolderService(inforHolderView, chestListSO);
+        infoHolderService = new InfoHolderService(inforHolderView, chestListSO, sOPlayerStatus);
 
     }
 

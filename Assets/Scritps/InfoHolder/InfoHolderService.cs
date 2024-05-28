@@ -1,18 +1,21 @@
+using System;
+using chestSystem;
 using UnityEngine;
 
 public class InfoHolderService
 {
-    private InforHolderView inforHolderView;
     private InfoHolderController infoHolderController;
-    private ChestListSO chestListSO;
-    public InfoHolderService(InforHolderView _inforHolderView, ChestListSO _chestListSO)
+
+    public InfoHolderService(InforHolderView _inforHolderView, ChestListSO _chestListSO, SOPlayerStatus _soplayerStatus)
     {
-        this.inforHolderView = _inforHolderView;
-        this.chestListSO = _chestListSO;
-        infoHolderController = new InfoHolderController(inforHolderView, chestListSO);
+
+        infoHolderController = new InfoHolderController(_inforHolderView, _chestListSO, _soplayerStatus);
+
 
     }
     public InfoHolderController GetInfoHolderController() => infoHolderController;
+
+
 
 
 }

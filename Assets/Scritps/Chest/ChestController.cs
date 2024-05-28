@@ -11,20 +11,22 @@ public class ChestController
         this.chestListSO = _chestListSO;
         this.chestSystemView = _chestSystemView;
         this.pfITem = _pfitem;
-        SettingUpChest();
+        // SettingUpChest();
     }
 
-    private void SettingUpChest()
+    public void SettingUpChest()
     {
-        foreach (ChestInfoSO chest in chestListSO.ChestInfoSOList)
+
+        for (int i = 0; i <= 4; i++)
         {
+            ChestInfoSO chest = chestListSO.ChestInfoSOList[Random.Range(0, chestListSO.ChestInfoSOList.Count)];
             ChestItem item = GameObject.Instantiate(pfITem, chestSystemView.transform).GetComponent<ChestItem>();
             item.SetImage(chest.chestImage);
-            // item.GetName(chest.chestName);
             item.SetTime(chest.lockedTime);
             item.GetChestInfoSO(chest);
 
         }
+
     }
 
 }

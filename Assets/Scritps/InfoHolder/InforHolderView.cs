@@ -13,12 +13,7 @@ public class InforHolderView : MonoBehaviour
     [SerializeField] private Button generateBtn;
 
     [SerializeField] private RectTransform panelBtn;
-    private InfoHolderController infoHolderController;
 
-    private void Start()
-    {
-        infoHolderController = GameService.Instance.GetInfoHolderService().GetInfoHolderController();
-    }
 
     public void SetPanelButton(bool panelStatus) => panelBtn.gameObject.SetActive(panelStatus);
 
@@ -31,7 +26,8 @@ public class InforHolderView : MonoBehaviour
 
     private void OnGenerateButtonClick()
     {
-        infoHolderController.OnGenerateButtonClick();
+        GameService.Instance.GetChestService().GetChestController().SettingUpChest();
+        generateBtn.gameObject.SetActive(false);
     }
 
     private void OnGemButtonClick()
@@ -52,6 +48,13 @@ public class InforHolderView : MonoBehaviour
         generateBtn.onClick.RemoveListener(OnGenerateButtonClick);
 
     }
+
+    public void SetGemCoin(int coin, int gem)
+    {
+        coinText.text = coin.ToString();
+        gemText.text = gem.ToString();
+    }
+
 
 
 
