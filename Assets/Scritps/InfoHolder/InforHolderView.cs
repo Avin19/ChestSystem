@@ -11,6 +11,7 @@ public class InforHolderView : MonoBehaviour
     [SerializeField] private Button startTimer;
     [SerializeField] private Button gemBtn;
     [SerializeField] private Button generateBtn;
+    private int gemTimer = 600;
 
     [SerializeField] private RectTransform panelBtn;
 
@@ -32,7 +33,7 @@ public class InforHolderView : MonoBehaviour
 
     private void OnGemButtonClick()
     {
-
+        GameService.Instance.GetChestItem().ReduceTimerUsingGem(gemTimer);
     }
 
     private void OnStartButton()
