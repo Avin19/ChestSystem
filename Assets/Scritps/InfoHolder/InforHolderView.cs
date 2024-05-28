@@ -32,8 +32,7 @@ public class InforHolderView : MonoBehaviour
 
     private void OnGemButtonClick()
     {
-        // Check gem amount
-        //reduce the time 
+
     }
 
     private void OnStartButton()

@@ -48,8 +48,8 @@ public class ChestItem : MonoBehaviour
 
     private void StartTimer()
     {
-        // chestInfoSO.unlockTimer -= Time.deltaTime;
+        chestInfoSO.lockedTime -= Time.deltaTime;
         TimeSpan timeSpan = TimeSpan.FromSeconds(chestInfoSO.lockedTime);
-        textTimer.text = timeSpan.ToString(@"hh\:mm\:ss\:fff");
+        textTimer.text = timeSpan.ToString(@"hh\:mm\:ss");
     }
 }
